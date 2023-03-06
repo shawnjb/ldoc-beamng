@@ -52,6 +52,8 @@ function benchLog(level, origin, msg, newline)
     end
 end
 
+--- Returns a table containing the names of all vehicle files in the "vehicles" directory.
+--- @return table vehicles A table containing the names of all vehicle files in the "vehicles" directory.
 local function getAllVehicles()
     local vehicles = {}
     local dir = FS:openDirectory('vehicles')

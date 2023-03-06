@@ -1,3 +1,13 @@
 {
-    "Lua.runtime.version": "LuaJIT"
+	"Lua.runtime.version": "LuaJIT",
+	"Lua.diagnostics.globals": [
+		"ngx"
+	],
+	"Lua.workspace.library": [
+		"$APPDATA/LuaRocks/share/lua/5.1",
+		"$APPDATA/LuaRocks/lib/lua/5.1",
+		"C:/Program Files (x86)/Lua/5.1/rocks",
+		"${3rd}/OpenResty/library"
+	],
+	"Lua.completion.autoRequire": false
 }
