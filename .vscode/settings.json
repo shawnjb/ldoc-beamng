@@ -1,5 +1,4 @@
 {
-	"Lua.runtime.version": "LuaJIT",
 	"Lua.diagnostics.globals": [
 		"ngx"
 	],
@@ -9,5 +8,10 @@
 		"C:/Program Files (x86)/Lua/5.1/rocks",
 		"${3rd}/OpenResty/library"
 	],
-	"Lua.completion.autoRequire": false
+	"Lua.completion.autoRequire": false,
+	"Lua.typeFormat.config": {
+		"format_line": "false",
+		"auto_complete_table_sep": "true",
+		"auto_complete_end": "true"
+	}
 }
