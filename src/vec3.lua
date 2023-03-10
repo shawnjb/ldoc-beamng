@@ -16,9 +16,6 @@ function Vector3(x, y, z) end
 
 --- 3D vector with X, Y & Z components.
 --- @class vec3
---- @field x number
---- @field y number
---- @field z number
 --- @version <5.2,LuaJIT
 local vec3 = {}
 
