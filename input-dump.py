@@ -1,6 +1,4 @@
 import os
-import sys
-import re
 
 def main():
     classes = [
@@ -217,7 +215,12 @@ def main():
         'sfxDescription'
     ]
     not_implemented = 0
+    need_implementation = []
+    f = open('./src/global/variables.lua', 'w')
+    f.write('--- @meta\n--- @diagnostic disable: undefined-doc-name\n\n')
     for c in classes:
+        f.write('--- @return ' + c + '\n')
+        f.write('function ' + c + '() end\n\n')
         file_name = c + '.lua'
         for root, dirs, files in os.walk('./src'):
             if file_name in files:
@@ -225,9 +228,15 @@ def main():
                 print('Found a file: ' + file_path)
                 break
         else:
+            need_implementation.append(c)
             not_implemented += 1
             continue
     print('Missing ' + str(not_implemented) + ' classes.')
+    f.close()
+    f = open('missing_classes.txt', 'w')
+    for c in need_implementation:
+        f.write(c + '\n')
+    f.close()
 
 if __name__ == '__main__':
     main()
