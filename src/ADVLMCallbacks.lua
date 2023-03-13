@@ -1,6 +1,6 @@
 --- @meta
 
 --- @class ADVLMCallbacks
---- @field public onActivate function
---- @field public onDeactivate function
+--- @field onActivate function
+--- @field onDeactivate function
 ADVLMCallbacks = {}

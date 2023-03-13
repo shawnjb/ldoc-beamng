@@ -120,7 +120,8 @@
         sendInputCommand = <function 30>,
         <metatable> = <table 12>
     },
-    ActionMapCommandContext = <13>{ <14>{
+    ActionMapCommandContext = <13>{
+        <14>{
             ___type = "static_class<ActionMapCommandContext>",
             __call = <function 31>,
             __index = <function 7>
@@ -131,7 +132,16 @@
         <metatable> = <table 13>
     },
     AddEventHandler = <function 32>,
-    AdvancedLightBinManager = <15>{ {}, {}, <16>{ {}, {}, <17>{ {}, {}, <table 5>,
+    AdvancedLightBinManager = <15>{
+        {},
+        {},
+        <16>{
+            {},
+            {},
+            <17>{
+                {},
+                {},
+                <table 5>,
                 ___type = "static_class<RenderBinManager>",
                 __call = <function 33>,
                 __index = <function 7>,
