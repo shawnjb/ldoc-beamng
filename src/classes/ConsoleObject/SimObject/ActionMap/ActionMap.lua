@@ -44,7 +44,7 @@
 local ActionMap = {}
 
 --- Call this table as a function to create a new ActionMap object.
---- @return ActionMap
+--- @return SimObject
 function ActionMap:__call() end
 
 --- Returns the index of the given ActionMap object.
@@ -77,12 +77,5 @@ function ActionMap.enableInputCommands(enabled) end
 function ActionMap.getInputCommands() end
 
 --- Returns a list of all ActionMap objects.
---- @return table
+--- @return table<number, { enabled: boolean, name: string, object: SimObject, trapHandledEvents: boolean }>
 function ActionMap.getList() end
-
---- Sends an input command.
---- @param string string Undocumented. Possibly the input command.
---- @param userdata userdata Undocumented. Possibly the command's related object.
---- @vararg any
---- There is no available documentation for this function.
-function ActionMap.sendInputCommand(string, userdata, ...) end

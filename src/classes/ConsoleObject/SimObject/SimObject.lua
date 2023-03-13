@@ -106,6 +106,11 @@ function SimObject:deleteObject() end
 function SimObject:deletePersistentId() end
 function SimObject:dump() end
 function SimObject:dumpGroupHierarchy() end
+
+--- Sets the object's persistent ID.
+--- @param objectId number
+function SimObject:setForcedId(objectId) end
+
 function SimObject:generatePersistentId() end
 function SimObject:getClassName() end
 function SimObject:getDeclarationLine() end
@@ -118,12 +123,35 @@ function SimObject:getFields() end
 function SimObject:getFieldsForEditor() end
 function SimObject:getFileName() end
 function SimObject:getGroup() end
+
+--- Returns the object's ID.
+--- @return number objectId
 function SimObject:getID() end
+
+--- Returns the object's ID.
+--- @return number objectId
 function SimObject:getId() end
+
+--- Returns the object's internal name.
+--- @return string internalName
 function SimObject:getInternalName() end
+
+--- Returns the object's name.
+--- @return string name
 function SimObject:getName() end
+
+--- Returns the object's persistent ID.
+--- @return number objectId
 function SimObject:getOrCreatePersistentID() end
+
+--- Returns the object's static data field by index.
+--- @param index number
+--- @return string value
 function SimObject:getStaticDataFieldbyIndex(index) end
+
+--- Returns the object's static data field by name.
+--- @param name string
+--- @return string value
 function SimObject:getStaticDataFieldbyName(name) end
 function SimObject:incRefCount() end
 function SimObject:inheritParentFields() end
@@ -133,7 +161,12 @@ function SimObject:inspectUpdate() end
 --- @param group SimGroup
 function SimObject:isChildOfGroup(group) end
 
+--- Returns whether the object is dirty in the World Editor.
+--- @return boolean dirty
 function SimObject:isEditorDirty() end
+
+--- Returns whether the object is hidden.
+--- @return boolean hidden
 function SimObject:isHidden() end
 
 --- Returns whether the object is locked.
@@ -196,8 +229,17 @@ function SimObject:setFileName(fileName) end
 function SimObject:setHidden(hidden) end
 function SimObject:setInternalName(internalName) end
 function SimObject:setIsSelected(selected) end
+
+--- Sets whether the object is locked.
+--- @param locked boolean
 function SimObject:setLocked(locked) end
+
+--- Sets the object's name.
+--- @param name string
 function SimObject:setName(name) end
+
+--- Sets whether the object's name can be changed.
+--- @param allowed boolean
 function SimObject:setNameChangeAllowed(allowed) end
 function SimObject:setSelected(selected) end
 function SimObject:setStaticDataFieldbyIndex(index, value) end
