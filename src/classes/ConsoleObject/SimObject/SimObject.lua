@@ -95,8 +95,8 @@
 local SimObject = {}
 
 function SimObject:__gc() end
-function SimObject:__index(self, index) end
-function SimObject:__newindex(self, index, value) end
+function SimObject.__index(index) end
+function SimObject.__newindex(index, value) end
 function SimObject:__tostring() end
 function SimObject:assignFieldsFromObject(fromObject) end
 function SimObject:clone() end
